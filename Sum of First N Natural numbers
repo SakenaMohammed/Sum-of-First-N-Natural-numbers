@@ -1,0 +1,16 @@
+import java.util.*;
+public class Number{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int num=sumOfNaturalNum(n);
+        System.out.println(num);
+    }
+    public static int sumOfNaturalNum(int n){
+        if(n==1 || n==0){
+            return n;
+        }
+        int r=n+sumOfNaturalNum(n-1);
+        return r;
+    }
+}
